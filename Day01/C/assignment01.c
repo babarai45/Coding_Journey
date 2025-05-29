@@ -1,4 +1,4 @@
-// Q1 write a progaram to print Hello Student on the screen
+// Q1 write a program to print Hello Student on the screen
 // #include <stdio.h>
 // int main()
 // {
@@ -26,12 +26,13 @@
 // }\
 
 
-// // // Q4  write a program to print "\n" on screen
+// // Q4  write a program to print "\n" on screen
 // #include <stdio.h>
 // int main()
 // {
-//     printf("\\n\n");
-//     printf("\\r");
+//     printf("\\n\n");   // it will print \n
+//     printf("\\r \n");    //it print\r
+//     printf("\\ \t  babar \n");
 //     return 0;
 // }
 
@@ -62,17 +63,70 @@
 // }
 
 
-// // Q3  write a program to print "Muhammad Babar" as same in double quotes
+// // // Q7 write a program to print "Muhammad Babar" as same in double quotes
+// //
+// #include <stdio.h>
+// int main()
+// {
+//     int l,w;
+//     printf("Enter the length and width of rectangle: ");
+//     scanf("%d %d",&l,&w);
+//     printf("Area of rectangle: %d\n",l*w);
 //
-#include <stdio.h>
+//     return 0;
+// }
+
+// // // Q 8 rite a program to print Your Name Age and your city using printf
+// #include <stdio.h>
+// int main()
+// {
+//     printf(""""
+//              "Muhammad Babar\n My Age is 22\n"
+//              "I live in Lahore Punjab Pakistan"
+//              """");
+//     return 0;
+// }
+
+
+
+// // Q9 Take two numbers and print them after swapping (without using 3rd variable — try logic later).
+// #include <stdio.h>
+// int main()
+// {
+//     int a=2,b=5;
+//     printf("Before Swapping a is %d  and b is %d \n",a,b);
+//     // so we use + - logic here
+//     a= a+b;   // 7
+//     b= a-b;
+//     a= a-b;
+//     printf("after swapping a is %d and  b is %d \n ", a,b);
+//
+//     return 0;
+//
+// }
+//
+//
+
+// 10 Take a large float and print in scientific format using %e
+// #include<stdio.h>
+// int main()
+// {
+//     double a = 35000.0;
+//     printf("in scientific %e \n",a);
+//
+//
+//     return 0;
+// }
+
+
+// Q 11  Take user input and convert into decimal,octal,decimal
+# include <stdio.h>
 int main()
 {
-    int l,w;
-    printf("Enter the length and width of rectangle: ");
-    scanf("%d %d",&l,&w);
-    printf("Area of rectangle: %d\n",l*w);
-
-    return 0;
+    int a;
+    printf("Enter A Number! ");
+    scanf("%d",&a);
+    printf("In Decimal %d \n",a);
+    printf("In HexaDecimal %x \n",a);
+    printf("In Octal %o \n",a);
 }
-
-// // Q7  write a program to print "Muhammad Babar" as same in double quotes
