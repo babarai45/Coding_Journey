@@ -1,0 +1,61 @@
+flowchart TD
+    A[🚀 Program Starts] --> B[📦 Import std::io Module]
+B --> C[🎯 Enter main Function]
+C --> D[🧺 Create Empty String::new]
+D --> E[💾 Allocate Memory on Heap]
+E --> F[🔗 Bind to 'input' Variable]
+F --> G[📢 Execute println! Macro]
+G --> H[🖥️ Display: 'Enter your name:']
+H --> I[⌨️ Call io::stdin]
+I --> J[🔍 Get Standard Input Handle]
+J --> K[📝 Call read_line &mut input]
+K --> L[⏳ Wait for User Input]
+L --> M[✅ User Presses Enter]
+M --> N{🛡️ Input Success?}
+N -->|✅ Success| O[📥 Store Input in String]
+N -->|❌ Error| P[💥 Panic with Error Message]
+P --> Q[🔴 Program Terminates]
+O --> R[🧹 Call input.trim]
+R --> S[✂️ Remove Whitespace/Newlines]
+S --> T[📢 Execute Final println! Macro]
+T --> U[🎨 Format String with Input]
+U --> V[👋 Display: 'Hello, name!']
+V --> W[🏁 Program Ends Successfully]
+
+%% Styling
+classDef startEnd fill:#e1f5fe,stroke:#01579b,stroke-width:3px,color:#000
+classDef process fill:#f3e5f5,stroke:#4a148c,stroke-width:2px,color:#000
+classDef input fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px,color:#000
+classDef output fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000
+classDef memory fill:#fce4ec,stroke:#880e4f,stroke-width:2px,color:#000
+classDef decision fill:#fff8e1,stroke:#f57f17,stroke-width:2px,color:#000
+classDef error fill:#ffebee,stroke:#c62828,stroke-width:3px,color:#000
+
+class A,W startEnd
+class B,C,G,H,I,J,T,U,V process
+class K,L,M input
+class D,E,F,O,R,S memory
+class N decision
+class P,Q error
+
+%% Memory allocation details
+subgraph MEM [🧠 Memory Operations]
+direction TB
+E --> E1[📍 Heap Allocation]
+E1 --> E2[🔢 Capacity: 0 bytes]
+E2 --> E3[📏 Length: 0 characters]
+O --> O1[📈 String Grows Dynamically]
+O1 --> O2[🔄 Reallocate if Needed]
+end
+
+%% Input/Output operations
+subgraph IO [🔄 I/O Operations]
+direction TB
+I --> I1[🖥️ Standard Input Stream]
+I1 --> I2[🔐 Lock Stream for Safety]
+K --> K1[📖 Read Until Newline]
+K1 --> K2[🔄 UTF-8 Validation]
+end
+
+style MEM fill:#f0f4c3,stroke:#827717,stroke-width:2px
+style IO fill:#e0f2f1,stroke:#00695c,stroke-width:2px

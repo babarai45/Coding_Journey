@@ -1,0 +1,2 @@
+Hello, World! This is file output.
+This is another message without a newline.

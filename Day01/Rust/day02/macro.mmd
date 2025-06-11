@@ -1,0 +1,96 @@
+flowchart TD
+    A[🚀 Rust Source Code] --> B[📝 Lexical Analysis]
+B --> C[🔍 Token Stream Creation]
+C --> D{🎯 Macro Found?}
+D -->|❌ No| E[📋 Continue Normal Parsing]
+D -->|✅ Yes| F[🎪 Macro Invocation Detected]
+
+F --> G[🔎 Pattern Matching Phase]
+G --> H{🧩 Pattern Matches?}
+H -->|❌ No Match| I[💥 Compile Error]
+H -->|✅ Match Found| J[⚡ Macro Expansion]
+
+J --> K[🏗️ Generate New Code]
+K --> L[🔄 Replace Macro Call]
+L --> M{🔍 More Macros?}
+M -->|✅ Yes| F
+M -->|❌ No| N[📊 Parse Generated Code]
+
+N --> O[🔧 Type Checking]
+O --> P[🎯 Code Generation]
+P --> Q[💾 Final Binary]
+
+E --> O
+
+%% Detailed macro expansion subprocess
+subgraph MACRO_EXPAND [🎪 Macro Expansion Details]
+direction TB
+MA[📥 Input: println!("Hello, {}!", name)]
+MB[🔍 Parse Pattern: ($($arg:tt)*)]
+MC[⚙️ Match Tokens]
+MD[🏗️ Generate: std::io::_print(...)]
+ME[📤 Output: Expanded Code]
+
+MA --> MB --> MC --> MD --> ME
+end
+
+%% Pattern matching details
+subgraph PATTERN [🧩 Pattern Matching Engine]
+direction TB
+PA[🎯 macro_rules! Definition]
+PB[📋 Input Token Stream]
+PC[🔄 Try Each Pattern]
+PD{✅ Match Found?}
+PE[⚡ Execute Template]
+PF[🚫 Try Next Pattern]
+
+PA --> PC
+PB --> PC
+PC --> PD
+PD -->|✅ Yes| PE
+PD -->|❌ No| PF
+PF --> PC
+end
+
+%% Token types
+subgraph TOKENS [🎲 Token Types]
+direction LR
+T1[🏷️ ident: variable names]
+T2[📊 expr: expressions]
+T3[🔧 ty: types]
+T4[📝 stmt: statements]
+T5[🧱 block: code blocks]
+T6[💎 literal: values]
+end
+
+%% Repetition handling
+subgraph REP [🔁 Repetition Handling]
+direction TB
+R1[📥 Input: $($item:expr),*]
+R2[🔄 Split by Separator]
+R3[⚡ Expand Each Item]
+R4[🔗 Join Results]
+R5[📤 Output: Combined Code]
+
+R1 --> R2 --> R3 --> R4 --> R5
+end
+
+%% Styling
+classDef source fill:#e1f5fe,stroke:#01579b,stroke-width:3px,color:#000
+classDef process fill:#f3e5f5,stroke:#4a148c,stroke-width:2px,color:#000
+classDef decision fill:#fff8e1,stroke:#f57f17,stroke-width:2px,color:#000
+classDef macro fill:#e8f5e8,stroke:#1b5e20,stroke-width:3px,color:#000
+classDef error fill:#ffebee,stroke:#c62828,stroke-width:3px,color:#000
+classDef output fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000
+
+class A,B,C source
+class E,G,J,K,L,N,O,P process
+class D,H,M decision
+class F,Q macro
+class I error
+class Q output
+
+style MACRO_EXPAND fill:#f0f4c3,stroke:#827717,stroke-width:2px
+style PATTERN fill:#e0f2f1,stroke:#00695c,stroke-width:2px
+style TOKENS fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+style REP fill:#e8eaf6,stroke:#283593,stroke-width:2px

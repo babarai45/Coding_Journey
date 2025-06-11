@@ -120,13 +120,27 @@
 
 
 // Q 11  Take user input and convert into decimal,octal,decimal
-# include <stdio.h>
-int main()
-{
-    int a;
-    printf("Enter A Number! ");
-    scanf("%d",&a);
-    printf("In Decimal %d \n",a);
-    printf("In HexaDecimal %x \n",a);
-    printf("In Octal %o \n",a);
+// # include <stdio.h>
+// int main()
+// {
+//     int a;
+//     printf("Enter A Number! ");
+//     scanf("%d",&a);
+//     printf("In Decimal %d \n",a);
+//     printf("In HexaDecimal %x \n",a);
+//     printf("In Octal %o \n",a);
+// }
+
+// Q 12  Take user input and show area of given input
+//
+#include <stdio.h>
+
+int main(){
+    int r;
+    float a;
+    printf("Enter area of radius \n");
+    scanf("%d",&r);
+    a=3.14*r*r;
+    printf("Area of Given input is %f \n ",a);
+    return 0;
 }
