@@ -18,7 +18,7 @@ fn main() {
     println!(" ");
     println!(" ");
     println!(" ");
-    print!("Hello World\n"); // correct
+    print!("Hello World\n"); // correc
                              // we can also add escape sequence like above
     println!("------------------ ");
 

@@ -68,36 +68,40 @@
 // // Q9 Take two numbers and print them after swapping (without using 3rd variable — try logic later).
 //
 
-fn main() {
-    let mut a = 5;
-    let mut b = 3;
-    println!("Before swapping a is {} and b is {}", a, b);
+// fn main() {
+//     let mut a = 5;
+//     let mut b = 3;
+//     println!("Before swapping a is {} and b is {}", a, b);
 
-    let a = a + b;
-    let b = a - b;
-    let a = a - b;
-    println!("After swapping a is {} and b is {}", a, b);
-}
+//     let a = a + b;
+//     let b = a - b;
+//     let a = a - b;
+// //     println!("After swapping a is {} and b is {}", a, b);
+// }
 
 // 10 Take a large float and print in scientific format using %e
-// #include<stdio.h>
-// int main()
-// {
-//     double a = 35000.0;
-//     printf("in scientific %e \n",a);
-//
-//
-//     return 0;
+// use std::io::stdin;
+// fn main() {
+//     println!("Enter double or large flot numner ");
+//     let mut number = String::new();
+//     stdin().read_line(&mut number).expect("put vailid ");
+//     let number: f64 = number.trim().parse().expect("parse");
+//     println!("your number is {:e}",number);
+//     println!("your number is {:E}",number);
+//     println!("your number is {:.5e}",number);
+//     println!("your number is {:.5E}",number);
 // }
 
-// Q 11  Take user input and convert into decimal,octal,decimal
-// # include <stdio.h>
-// int main()
-// {
-// int a;
-// printf("Enter A Number! ");
-// scanf("%d",&a);
-// printf("In Decimal %d \n",a);
-// printf("In HexaDecimal %x \n",a);
-// printf("In Octal %o \n",a);
-// }
+// // Q 11  Take user input and convert into decimal,octal,decimal
+use std::io::stdin;
+fn main() {
+    println!("Enter a Number");
+    let mut n = String::new();
+    stdin().read_line(&mut n).expect("read");
+    let n: u32 = n.trim().parse().expect("parse");
+    println!("The Number in Binary formate is  {:b}",n );
+    println!("The Number in Decimal formate is  {}",n );
+    println!("The Number in octal formate is  {:o}",n );
+    println!("The Number in Hexdecimal formate is {:x}",n );
+    println!("The Number in Hexdecimal  i Capital formate is {:X}",n );
+}
