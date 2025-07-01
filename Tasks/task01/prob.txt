@@ -1,0 +1,1 @@
+Write A programe to print hello world on consol screen using c/c++ , rust, py,js,kotlin
