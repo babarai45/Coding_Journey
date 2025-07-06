@@ -1,1 +1,6 @@
-Write A programe to print hello world on consol screen using c/c++ , rust, py,js,kotlin
+Q1- Write A programe to calculate avarage of three integer and 
+print the result and input values from user.
+
+Q2- Write a program to calculate the area of circumference of a circle
+and print the result and input values from user.
+

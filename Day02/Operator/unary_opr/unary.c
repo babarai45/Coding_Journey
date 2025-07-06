@@ -29,5 +29,27 @@ int main() {
     x = sizeof(double);
     printf("size of double is %d\n",x);
 
+int n,m;
+n= sizeof(m);
+printf("varbale m size is %d\n",n);
+
+
+
+// -----------cosntant sizecehecking 
+
+int p;
+p=sizeof(65);
+printf("value of 65 memeory size is %d\n",p);
+p=sizeof(4.3);  // it is considerd as real number so its always doubletyped 
+printf("value of 65 memeory size is %d\n",p);
+p=sizeof(0.4566);
+printf("value of 0.4566 memeory size is %d\n",p);
+
+p=sizeof('A');
+printf("value of A memeory size is %d\n",p);
+
+
+
+
     return 0;
 }
