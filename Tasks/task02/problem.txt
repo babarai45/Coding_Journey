@@ -1,0 +1,11 @@
+Q1-Write A program to input character from user and prints its ASSCI code;
+
+Q2- Write a program to input a number from user and print character ?
+
+
+Q3- write a program to three input character from user and print their ASCII code with character crosspondingly;
+
+
+Q4- Write a program to print the last digit of a number entered by user;
+Q5 Write a program to print a given number in without last digit;
+ 

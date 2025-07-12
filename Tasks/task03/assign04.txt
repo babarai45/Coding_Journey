@@ -1,0 +1,1 @@
+Q1:write a program to calcalute size of character costant in C?
