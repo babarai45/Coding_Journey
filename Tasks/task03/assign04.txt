@@ -1,1 +1,16 @@
 Q1:write a program to calcalute size of character costant in C?
+
+Q2:write a program to calcalute size of real constant in C?
+
+Q3:write a program with one char type variavle assigned with 'A' and 
+change it to  value 'B' and print it uinsing increment operator?
+
+Q4:write a program to swap two integer variables using third variable?
+
+Q5:write a program to swap two integer variables using without  third variable?
+
+Q6:write a program to swap two integer variables using without  third variable and +, - operations ?
+
+Q7:write a program to swap two integer variables using without  third variable and arithmatic operations ?
+
+Q8:write a program to swap two integer variables using without  third variable in single line arithmatic expression?
