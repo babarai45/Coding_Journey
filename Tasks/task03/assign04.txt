@@ -14,3 +14,19 @@ Q6:write a program to swap two integer variables using without  third variable a
 Q7:write a program to swap two integer variables using without  third variable and arithmatic operations ?
 
 Q8:write a program to swap two integer variables using without  third variable in single line arithmatic expression?
+
+Q9:write a program to input three digits and print sum of those three digits?
+
+Q10:write a program to find ASCCII  code of a character '+'?
+   
+Q11:write a program to print the size of an int, a float, double and char data types variables in C using sizeof operator?
+
+Q12:write a program to print to make last digit of a number stored in a variable as zero?
+```c
+# Example 
+if the number is 1234 then it should be 1230
+
+#Q13:write a program to take a number from user and also digit and apend that digit at the end of the number and print it.
+```c
+Example
+# If the number is 1234 and digit is 5, then it should be 12345
