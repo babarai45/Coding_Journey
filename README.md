@@ -24,8 +24,9 @@
     <tbody>
 
 <tr>
-    <td><a href="./C/c_outlin.md">🥇 C Programming</a></td>
+    <td>🥇 <a href="/C/c_outlin.md">C Programming</a></td>
 </tr>
+
 
 <tr>
     <td>🥈 C++ Programming</td>
